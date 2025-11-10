@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Certifications</title>
+    <title>Salim Portfolio - Accueil</title>
     <style>
         /* Styles généraux */
         * {
@@ -78,6 +78,81 @@
         nav ul li a:hover, nav ul li a.active {
             background-color: #667eea;
             color: white;
+        }
+
+        /* Section Bio */
+        .bio-section {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .bio-text h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bio-text h2 {
+            color: #667eea;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .bio-text p {
+            color: #5a6c7d;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .bio-skills {
+            margin: 2rem 0;
+        }
+
+        .bio-skills h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .bio-skills ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .bio-skills li {
+            color: #5a6c7d;
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .bio-contact {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .bio-contact p {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .bio-contact strong {
+            color: #667eea;
         }
 
         /* Section principale */
@@ -323,6 +398,16 @@
                 margin: 0 0.5rem;
             }
 
+            .bio-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .bio-skills ul {
+                grid-template-columns: 1fr;
+            }
+
             .tabs-header {
                 flex-direction: column;
             }
@@ -344,9 +429,9 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#" class="active">Accueil</a></li>
                         <li><a href="#">Projets</a></li>
-                        <li><a href="#" class="active">Certifications</a></li>
+                        <li><a href="#">Certifications</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
@@ -356,6 +441,35 @@
 
     <main>
         <div class="container">
+            <!-- Section Bio Ajoutée -->
+            <section class="bio-section">
+                <div class="bio-content">
+                    <div class="bio-text">
+                        <h1>Salim Djalal</h1>
+                        <h2>Étudiant Passionné en Cybersécurité</h2>
+                        <p>Je suis passionné par la sécurité informatique et les réseaux, avec une forte motivation pour protéger les systèmes contre les cybermenaces. Mon parcours combine une solide formation théorique avec une expérience pratique sur des plateformes reconnues comme Cisco Networking Academy et TryHackMe.</p>
+                        
+                        <div class="bio-skills">
+                            <h3>Mes Domaines de Compétences :</h3>
+                            <ul>
+                                <li>🔒 Sécurisation des infrastructures réseau</li>
+                                <li>🛡️ Analyse et prévention des menaces cyber</li>
+                                <li>💻 Administration des systèmes Linux/Windows</li>
+                                <li>🔍 Forensic numérique et investigation</li>
+                                <li>🐧 Maîtrise des outils de sécurité sous Linux</li>
+                                <li>🌐 Protocoles réseaux et communications</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bio-contact">
+                            <p>📧 <strong>Email :</strong> salim.djalal@example.com</p>
+                            <p>🎓 <strong>Formation :</strong> Cybersécurité & Administration Réseaux</p>
+                            <p>🎯 <strong>Objectif :</strong> Devenir Expert en Sécurité Informatique</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <div class="page-title">
                 <h1>Mes Certifications</h1>
                 <p>Découvrez mes certifications en cybersécurité et réseaux obtenues grâce à ma formation</p>
@@ -371,32 +485,10 @@
                     </button>
                 </div>
                 
+                <!-- CERTIFICATIONS INVERSÉES -->
                 <div id="annee1" class="tab-content active">
                     <h2><i class="fas fa-book-open"></i> Certifications - 1ère Année</h2>
                     <div class="certifications-list">
-                        <div class="certification-item">
-                            <h3>TryHackMe - Cybersécurité Pratique</h3>
-                            <div class="issuer">
-                                <i class="fas fa-building"></i> TryHackMe Platform
-                            </div>
-                            <div class="date">
-                                <i class="far fa-calendar"></i> Obtenue en 2024
-                            </div>
-                            <p>Formation pratique en cybersécurité couvrant les fondamentaux de la sécurité informatique et les techniques de penetration testing.</p>
-                            
-                            <ul class="skills-list">
-                                <li>Forensique numérique et analyse de systèmes</li>
-                                <li>Techniques de penetration testing</li>
-                                <li>Sécurisation des réseaux et systèmes</li>
-                                <li>Utilisation d'outils de sécurité sous Linux</li>
-                                <li>Sensibilisation à la cyber awareness</li>
-                            </ul>
-                            
-                            <a href="certifications/Salim TryHackme.pdf" target="_blank" class="cert-link">
-                                <i class="fas fa-file-pdf"></i> Voir la certification
-                            </a>
-                        </div>
-                        
                         <div class="certification-item">
                             <h3>Cisco Networking Academy</h3>
                             <div class="issuer">
@@ -424,10 +516,29 @@
                 
                 <div id="annee2" class="tab-content">
                     <h2><i class="fas fa-rocket"></i> Certifications - 2ème Année</h2>
-                    <div class="no-certifications">
-                        <i class="fas fa-hourglass-half"></i>
-                        <h3>En cours d'acquisition</h3>
-                        <p>Les certifications de ma deuxième année seront bientôt disponibles ici.</p>
+                    <div class="certifications-list">
+                        <div class="certification-item">
+                            <h3>TryHackMe - Cybersécurité Pratique</h3>
+                            <div class="issuer">
+                                <i class="fas fa-building"></i> TryHackMe Platform
+                            </div>
+                            <div class="date">
+                                <i class="far fa-calendar"></i> Obtenue en 2024
+                            </div>
+                            <p>Formation pratique en cybersécurité couvrant les fondamentaux de la sécurité informatique et les techniques de penetration testing.</p>
+                            
+                            <ul class="skills-list">
+                                <li>Forensique numérique et analyse de systèmes</li>
+                                <li>Techniques de penetration testing</li>
+                                <li>Sécurisation des réseaux et systèmes</li>
+                                <li>Utilisation d'outils de sécurité sous Linux</li>
+                                <li>Sensibilisation à la cyber awareness</li>
+                            </ul>
+                            
+                            <a href="certifications/Salim TryHackme.pdf" target="_blank" class="cert-link">
+                                <i class="fas fa-file-pdf"></i> Voir la certification
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
